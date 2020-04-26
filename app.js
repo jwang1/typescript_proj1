@@ -22,6 +22,7 @@ var ENVS;
     console.log("________ inside Transpiled JavaScript ______");
     console.log("ENVS['DEV']] = " + ENVS['DEV']);
     console.log("ENVS[ENVS['DEV']]] = " + ENVS[ENVS['DEV']]);
+    console.log("what's inside this object ENVS? : " + ENVS);
 
 })(ENVS || (ENVS = {}));
 ;
