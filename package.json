@@ -1,0 +1,11 @@
+{
+  "name": "first_ts",
+  "version": "1.0.0",
+  "description": "https://genesyslearning.udemy.com/course/understanding-typescript/learn/lecture/16949340#overview uses npm, I'm choosing yarn",
+  "main": "index.js",
+  "author": "jw",
+  "license": "JW",
+  "dependencies": {
+    "lite-server": "^2.5.4"
+  }
+}
