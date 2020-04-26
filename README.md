@@ -12,4 +12,4 @@ npm install --save-dev lite-server &
 
 npm start &
 
-## 5. note, Visual Code Studio VSCode also has Plugin (lite-server), from there, just plugin (may not need to update package.json), and then start the server (default port 5000,  npm start 3000 by default)
+## 5. note, Visual Code Studio VSCode also has Plugin (lite-server), from there, just plugin (may not need to update package.json), and then start the server (default port 5500,  npm start 3000 by default)
