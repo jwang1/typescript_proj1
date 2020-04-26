@@ -36,3 +36,30 @@ var ENVS;
 2. Object:  ENVS["DEV"] = 0;
 
 ***
+
+
+## 7. union type -- string | number | boolean
+
+```TypeScript
+function add(n1: string | number, n2 : string | number) {
+    if (typeof (n1) === 'number' && typeof (n2) === 'number') {
+        return (+n1) + (+n2);  // note +n1 forces to make sure n1 is number, otherwise transpiler error
+    } else {
+        return n1.toString() + n2.toString();
+    }
+}
+```
+
+## 8. literal type
+
+```TypeScript
+function add(n1: string | number,
+             n2: string | number,
+             resultPresentation: 'as-number' | 'as-text') {
+    if (typeof(n1) === 'number' && typeof(n2) === 'number' || resultPresentation === 'as-number') {
+        return +n1 + +n2;
+    } else {
+        return n1.toString() + n2.toString();
+    }
+}
+```
