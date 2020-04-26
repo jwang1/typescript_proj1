@@ -2,10 +2,15 @@
   "name": "first_ts",
   "version": "1.0.0",
   "description": "https://genesyslearning.udemy.com/course/understanding-typescript/learn/lecture/16949340#overview uses npm, I'm choosing yarn",
-  "main": "index.js",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && ext 1",
+    "start": "lite-server"
+  },
   "author": "jw",
   "license": "JW",
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
     "lite-server": "^2.5.4"
   }
 }
