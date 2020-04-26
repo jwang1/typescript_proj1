@@ -63,3 +63,31 @@ function add(n1: string | number,
     }
 }
 ```
+
+## 9. type alias
+
+```TypeScript
+
+type User = {name: string; age: number};
+
+function greet(usr: User) {
+    ...
+}
+```
+
+## 10. Function type usage
+
+```TypeScript
+
+function add(n1: number, n2: number): number {
+    return n1 + n2;
+}
+
+// Function type used to define a variable to accept specific Function-type: here, 2 number parameters and returning a number
+let aFunc: (a: number, b: number) => number;
+aFunc = add;
+
+console.log(aFunc(21, 3));
+```
+
+
