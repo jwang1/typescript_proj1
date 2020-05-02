@@ -8,7 +8,7 @@ npm install --save-dev lite-server &
 
 ## 3. update package.json to add "start" of "lite-server" in "script" field
 
-## 4. start lite-server
+## 4. start lite-server   (need to be in the project directory; sometimes, VS default dir on shell command, is where VS runs)
 
 npm start &
 
@@ -90,4 +90,7 @@ aFunc = add;
 console.log(aFunc(21, 3));
 ```
 
+## 11. TypeScript Interfaces are NOT transpiled to JavaScript
+
+TS Interfaces, similar to Java Interface, but different in the sense that TS Interfaces are not transpiled into JS.
 
