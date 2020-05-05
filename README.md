@@ -96,7 +96,7 @@ TS Interfaces, similar to Java Interface, but different in the sense that TS Int
 
 ## 12. Discriminated Unions (TypeScript types)
 
-```
+```TypeScript
 interface   A {
     kind: "a",
     walking: () => void
@@ -124,4 +124,40 @@ function chooseAction(action: AOrB) {
 
 chooseAction({"kind": "b", "walking": () => console.log("it's type B, and started walking")});
 
+```
+
+## 13. A working launch.json (where node executable can be obtained via which node from command line)
+
+```Json
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Program",
+            "runtimeExecutable": "/Users/user-name-dir/.nvm/versions/node/v10.9.0/bin/node",
+            "port": 3002,
+
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/projects/first_ts/types/DiscriminatedUnions.ts",
+            //"program": "${workspaceFolder}/projects/first_ts/main.ts",
+
+            // VS not allowing multiple TS file debugging
+            // "program": ["${workspaceFolder}/projects/first_ts/maints",
+            //            "${workspaceFolder}/projects/first_ts/app.ts"],
+            "outFiles": [
+                //"${workspaceFolder}/**/*.js"
+                "${workspaceFolder}/projects/first_ts/dist/**/*.js"
+            ]
+        }
+
+    ]
+}
 ```
