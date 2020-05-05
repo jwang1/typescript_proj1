@@ -140,12 +140,15 @@ chooseAction({"kind": "b", "walking": () => console.log("it's type B, and starte
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
-            "runtimeExecutable": "/Users/user-name-dir/.nvm/versions/node/v10.9.0/bin/node",
-            "port": 3002,
+            // Without runtimeExecutable (specially when nvm is used for npm and node), will get "no path found for node" error during launch
+            "runtimeExecutable": "/Users/jwang/.nvm/versions/node/v10.9.0/bin/node",
+            // For some reason, comment-out the port, both Debug and direct-run-without-debug WORK
+            //"port": 3003,
 
             "skipFiles": [
                 "<node_internals>/**"
             ],
+            // TODO: still trying to find out multiple TypeScript classes to be debugged
             "program": "${workspaceFolder}/projects/first_ts/types/DiscriminatedUnions.ts",
             //"program": "${workspaceFolder}/projects/first_ts/main.ts",
 
@@ -153,8 +156,8 @@ chooseAction({"kind": "b", "walking": () => console.log("it's type B, and starte
             // "program": ["${workspaceFolder}/projects/first_ts/maints",
             //            "${workspaceFolder}/projects/first_ts/app.ts"],
             "outFiles": [
-                //"${workspaceFolder}/**/*.js"
-                "${workspaceFolder}/projects/first_ts/dist/**/*.js"
+                "${workspaceFolder}/**/*.js"
+                //"${workspaceFolder}/projects/first_ts/dist/**/*.js"
             ]
         }
 
