@@ -94,3 +94,34 @@ console.log(aFunc(21, 3));
 
 TS Interfaces, similar to Java Interface, but different in the sense that TS Interfaces are not transpiled into JS.
 
+## 12. Discriminated Unions (TypeScript types)
+
+```
+interface   A {
+    kind: "a",
+    walking: () => void
+}
+
+interface  B {
+    kind: "b",
+    talking: () => void
+}
+
+type AOrB = A | B;
+
+function chooseAction(action: AOrB) {
+    switch(action.kind) {
+        case "a":
+            walking();
+            break;
+        case "b":
+            talking();
+            break;
+        default:
+            console.log("not implemented");
+    }
+}
+
+chooseAction({"kind": "b", "walking": () => console.log("it's type B, and started walking")});
+
+```
